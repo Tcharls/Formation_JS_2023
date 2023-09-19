@@ -1,5 +1,8 @@
 body{
     color:grey;
+    height: 95vh;
+    width: 95vw;
+    background-color:bisque;
 }
 
 header{
@@ -18,4 +21,18 @@ header{
     font-style: oblique;
     flex-direction: column-reverse;
     color:blue;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+article{
+    flex-grow: 1;
+}
+
+footer{
+    text-align: center;
 }
