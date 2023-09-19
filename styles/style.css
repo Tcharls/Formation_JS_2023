@@ -1,3 +1,21 @@
 body{
-    color:red;
+    color:grey;
+}
+
+header{
+    font-weight: bold;
+    font-size: 25pt;
+    text-decoration: underline;
+}
+
+#meme{
+    color:turquoise;
+    text-transform: uppercase;
+
+}
+
+#js{
+    font-style: oblique;
+    flex-direction: column-reverse;
+    color:blue;
 }
