@@ -36,3 +36,7 @@ article{
 footer{
     text-align: center;
 }
+
+#meme-viewer{
+    display: flex;
+}
