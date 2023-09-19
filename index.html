@@ -9,10 +9,10 @@
       href="/node_modules/bootstrap/dist/css/bootstrap.css"
     />
     <link rel="stylesheet" href="styles/style.css" />
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
   </head>
 
   <body>
+    <div id="is-js-loaded">JS pas charger</div>
     <div id="main">
       <header><span id="meme">Meme</span>.<span id="js">js</span></header>
       <!-- <nav>cliquez ici</nav> -->
@@ -53,7 +53,7 @@
           <svg
             width="100%"
             height="100%"
-            viewBox="0 0 1900 2000"
+            viewBox="0 0 2000 2000"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -72,7 +72,10 @@
           <div>droite</div>
         </div>
       </article>
+      <button id="dontclick" type="button">NE PAS CLIQUER ICI</button>
       <footer>Copyright &copy; 2023 Tcharls</footer>
     </div>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/js/index.js"></script>
   </body>
 </html>
