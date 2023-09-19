@@ -1,42 +1,47 @@
-body{
-    color:grey;
+body {
+    color: grey;
     height: 95vh;
     width: 95vw;
-    background-color:bisque;
+    background-color: bisque;
 }
 
-header{
+header {
     font-weight: bold;
     font-size: 25pt;
     text-decoration: underline;
 }
 
-#meme{
-    color:turquoise;
+#meme {
+    color: turquoise;
     text-transform: uppercase;
 
 }
 
-#js{
+#js {
     font-style: oblique;
     flex-direction: column-reverse;
-    color:blue;
+    color: blue;
 }
 
-#main{
+#main {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-article{
+article {
     flex-grow: 1;
 }
 
-footer{
+footer {
     text-align: center;
 }
 
-#meme-viewer{
+#meme-viewer {
     display: flex;
+    height: 100%;
+}
+
+#meme-viewer> :first-child {
+    flex-grow: 1;
 }
