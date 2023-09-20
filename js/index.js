@@ -39,11 +39,20 @@ function initJs(color) {
     function onformsubmit(evt) {
         evt.preventDefault()
         console.log(evt);
-        console.log('texte', evt.target['texte'].value);
-        console.log('texte', evt.target['Taille'].value);
-        console.log('texte', evt.target['PosX'].value);
-        console.log('texte', evt.target['PosY'].value);
-        console.log('texte', evt.target['Color'].value);
+
+        var meme={
+            texte: evt.target["texte"].value,
+            taille: Number(evt.target["Taille"].value),
+            posX: Number(evt.target["PosX"].value),
+            posY: Number(evt.target['PosY'].value),
+            color: evt.target["Color"].value,
+        };
+        console.log(meme);
+        // console.log('texte', evt.target['texte'].value);
+        // console.log('texte', evt.target['Taille'].value);
+        // console.log('texte', evt.target['PosX'].value);
+        // console.log('texte', evt.target['PosY'].value);
+        // console.log('texte', evt.target['Color'].value);
         // debugger;
     }
 
