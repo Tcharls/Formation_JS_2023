@@ -1,5 +1,11 @@
+/**
+ * fonction d'init de JS
+ * @param {string} color chaine de valeur de couleur css
+ * @returns {undefined} pas de retour
+ */
+
 function initJs(color) {
-    // console.time('fnInitJs')
+  // console.time('fnInitJs')
   console.log(arguments);
   console.warn(arguments);
   console.error(arguments);
@@ -9,7 +15,7 @@ function initJs(color) {
   jsLoadedNode.innerHTML = "JS est bien <b>CHARGE</b>";
   jsLoadedNode.style.color = color;
   jsLoadedNode.style.textAlign = "center";
-//   console.timeEnd('fnInitJs')
+  //   console.timeEnd('fnInitJs')
 }
 
-initJs("black", "teste");
+initJs("black");
