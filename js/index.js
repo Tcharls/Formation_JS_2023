@@ -4,7 +4,7 @@
  * @returns {undefined} pas de retour
  */
 
-function initJs(color) {
+function changePreHeader(color) {
   // console.time('fnInitJs')
   console.log(arguments);
   console.warn(arguments);
@@ -16,6 +16,14 @@ function initJs(color) {
   jsLoadedNode.style.color = color;
   jsLoadedNode.style.textAlign = "center";
   //   console.timeEnd('fnInitJs')
+}
+
+function initJs(params) {
+  changePreHeader("black");
+  console.log("debut initJs")
+  document.querySelector('#dontclick').addEventListener("click", function (evt) {
+    console.log(evt);
+  });
 }
 
 initJs("black");
