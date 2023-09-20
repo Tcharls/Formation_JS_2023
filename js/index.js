@@ -29,8 +29,14 @@ function initJs(color) {
   document
     .querySelector("#dontclick")
     .addEventListener("click", function (evt) {
-      console.log(evt);
+      changePreHeader("tomato");
     });
 }
 
-initJs("black");
+/** declenche le chargement apres chargement DOM
+
+ */
+document.addEventListener('DOMContentLoaded',function (evt){
+    initJs("black");
+})
+

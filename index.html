@@ -9,6 +9,8 @@
       href="/node_modules/bootstrap/dist/css/bootstrap.css"
     />
     <link rel="stylesheet" href="styles/style.css" />
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/js/index.js"></script>
   </head>
 
   <body>
@@ -69,13 +71,47 @@
               Ici commence le JS
             </text>
           </svg>
-          <div>droite</div>
+          <div>
+            <form action="" name="meme_form" method="post">
+              <h2>Edit Meme</h2>
+              <label for="texte">Texte</label>
+              <input type="text" name="texte" id="texte" />
+
+              <div>
+                <label for="Taille">Taille</label>
+                <input
+                  type="number"
+                  name="Taille"
+                  id="Taille"
+                  min="100"
+                  max="900"
+                  step="100"
+                />
+              </div>
+
+              <div class="col">
+                <div>
+                  <label for="PosX">PosX</label>
+                  <input type="number" name="PosX" id="PosX" min="0" step="5" />
+                </div>
+                <div>
+                  <label for="PosY">PosY</label>
+                  <input type="number" name="PosY" id="PosY" min="0" step="5" />
+                </div>
+              </div>
+              <div>
+                <label for="Color">Color</label>
+                <input type="color" name="Color" id="Color" />
+              </div>
+              <br>
+              <div><input type="reset" value="Reset"></div>
+              <div><button type="submit">Submit</button></div>
+            </form>
+          </div>
         </div>
       </article>
       <button id="dontclick" type="button">NE PAS CLIQUER ICI</button>
       <footer>Copyright &copy; 2023 Tcharls</footer>
     </div>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="/js/index.js"></script>
   </body>
 </html>

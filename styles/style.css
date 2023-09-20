@@ -44,3 +44,20 @@ footer {
 #meme-viewer > :first-child {
   flex-grow: 1;
 }
+#meme-viewer > div {
+  padding: 10px 5px;
+  overflow-y: scroll;
+  text-align: center;
+  min-width: 300px;
+}
+#meme-viewer .col {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.col > div {
+  width: 48%;
+}
+.col input {
+  width: 90%;
+}
