@@ -10,6 +10,8 @@ function Meme(configuredMeme) {
     this.posx = 0;
     this.posy = 50;
     this.taille = 20;
+    this.fontWeight = 500;
+    this.fontSize = 32 ; 
     this.underline = false;
     this.italic = false;
     this.color = "#000000";
