@@ -4,21 +4,16 @@
  * "this." => public
  */
 
-function Meme() {
-    this.texte = "texte du meme";
-    var _imageId = "0";
-    this.getImageId = function () {
-        return _imageId;
+function Meme(configuredMeme) {
+    this.texte = "";
+    // this.id = "id du meme";
+    this.posx = 0;
+    this.posy = 50;
+    this.taille = 20;
+    this.underline = false;
+    this.italic = false;
+    this.color = "#000000";
+    this.imageId = -1;
+
     }
-
-    function _changeImage(imageId) {
-        console.log("change image fn called");
-        _imageId = imageId;     
-    }
-
-this._changeImage = _changeImage;
-
-console.log("Meme called", this.texte);
-_changeImage(25);
-console.log(_imageId);
-}
+var meme=new Meme();
