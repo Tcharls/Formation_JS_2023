@@ -47,6 +47,7 @@ function initJs(color) {
             posY: Number(evt.target['PosY'].value),
             color: evt.target["Color"].value,
         };
+        
         console.log(meme);
         // console.log('texte', evt.target['texte'].value);
         // console.log('texte', evt.target['Taille'].value);
