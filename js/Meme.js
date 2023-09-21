@@ -7,7 +7,7 @@
  * construction d'un meme avec ou sans JSON
  * @param {string} jsonConfiguredMemeStr 
  */
-function Meme(jsonConfiguredMemeStr) {
+export function Meme(jsonConfiguredMemeStr) {
     this.texte = "";
     // this.id = "id du meme";
     this.posx = 0;
@@ -30,7 +30,6 @@ function Meme(jsonConfiguredMemeStr) {
 
 }
 
-var meme = new Meme();
 
 
 

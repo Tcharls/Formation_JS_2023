@@ -65,3 +65,10 @@ class ImageMeme extends ImageShort {
         }
     }
 }
+
+class ImagesList extends Array{
+    loadFromRest(){
+        
+    }
+
+}

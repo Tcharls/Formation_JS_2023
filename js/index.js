@@ -1,3 +1,5 @@
+import { Meme } from './Meme.js';
+
 /**
  * fonction d'init du bandeau JS
  * @param {string} color chaine de valeur de couleur css
