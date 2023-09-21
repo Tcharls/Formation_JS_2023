@@ -1,4 +1,4 @@
-import { ImageMeme as Img } from './images.js';
+import { ImageMeme as Img } from './Image.js';
 /**
  * Constructeur d'objet Meme
  * variable commencant par "_" => privé (comme toute var déclarée)
