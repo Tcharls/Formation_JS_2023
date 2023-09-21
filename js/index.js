@@ -40,14 +40,14 @@ function initJs(color) {
         evt.preventDefault()
         console.log(evt);
 
-        var meme={
+        var meme = {
             texte: evt.target["texte"].value,
             taille: Number(evt.target["Taille"].value),
             posX: Number(evt.target["PosX"].value),
             posY: Number(evt.target['PosY'].value),
             color: evt.target["Color"].value,
         };
-        
+
         console.log(meme);
         // console.log('texte', evt.target['texte'].value);
         // console.log('texte', evt.target['Taille'].value);

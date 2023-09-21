@@ -14,7 +14,7 @@ function Meme(jsonConfiguredMemeStr) {
     this.posy = 50;
     this.taille = 20;
     this.fontWeight = 500;
-    this.fontSize = 32 ; 
+    this.fontSize = 32;
     this.underline = false;
     this.italic = false;
     this.color = "#000000";
@@ -24,13 +24,13 @@ function Meme(jsonConfiguredMemeStr) {
      * chargement valeurs depuis un meme en json
      * @param {string} jsonStr 
      */
-    this.loadFromString = function (jsonStr){
-            Object.assign(this,JSON.parse(jsonStr));
-        };
+    this.loadFromString = function (jsonStr) {
+        Object.assign(this, JSON.parse(jsonStr));
+    };
 
-    }
+}
 
-var meme=new Meme();
+var meme = new Meme();
 
 
 
