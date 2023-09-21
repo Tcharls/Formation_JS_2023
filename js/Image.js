@@ -1,4 +1,6 @@
 class ImageShort {
+    /** ex declaration variable private */
+    #uid;
     /** declaration variable */
     w;
     h;
@@ -6,6 +8,7 @@ class ImageShort {
 
     /** declaration constructeur */
     constructor(img) {
+        this.#uid=Math.random();
         if (undefined !== img.w) {
             this.w = img.w;
         }
@@ -18,6 +21,14 @@ class ImageShort {
         } else {
             this.url = "";
         }
+    }
+
+    get uid() {
+        return this.#uid;
+    }
+
+    set uid(value){
+        this.#uid = value;
     }
 }
 
