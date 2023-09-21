@@ -1,4 +1,25 @@
 import { Meme } from './Meme.js';
+import { ImagesList, listeImages } from './Image.js'
+// autre possibilité de déclaration fonction
+/**
+ * chgt liste option du select en fonciton de la liste d'image
+ * @param {ImagesList} images 
+ */
+const loadSelectImages = (images=listeImages) => {
+    const select = document.querySelector('select#image'); // déclare liste
+    const noItem = select.item(0); // récupère l'unique valeur de la liste initiale
+    select.innerHTML = ""; // purge liste
+    select.appendChild(noItem) // recrée la liste avec la valeur sauvegardé
+
+    images.map((e) => {
+        const optEleme = document.createElement("option");
+        optEleme.value = e.id;
+        optEleme.innerHTML = e.titre;
+        select.appendChild(optEleme);
+    });
+}
+window.lso=loadSelectImages
+
 /** let meme=new Meme();
 console.log(meme);
 */
