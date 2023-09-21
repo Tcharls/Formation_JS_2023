@@ -1,5 +1,6 @@
 import { Meme } from './Meme.js';
-import { ImagesList, listeImages } from './Image.js'
+import { ImagesList, listeImages } from './Image.js';
+
 // autre possibilité de déclaration fonction
 /**
  * chgt liste option du select en fonciton de la liste d'image

@@ -1,3 +1,5 @@
+import RestAdr , {REST_RESSOURCES} from './constantes.js'
+
 class ImageShort {
     /** ex declaration variable private */
     #uid;
@@ -68,7 +70,7 @@ export class ImageMeme extends ImageShort {
 
 export class ImagesList extends Array{
     loadFromRest(){
-        return fetch('http://localhost:5679/images')
+        return fetch(`${RestAdr}${REST_RESSOURCES.images}`)
             .then(response=>{
                 return response.json();})
             .then((arr)=>{
