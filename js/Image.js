@@ -6,8 +6,10 @@ class ImageShort {
     h;
     url;
 
-    /** declaration constructeur */
-    constructor(img) {
+    /** declaration constructeur par défaut
+    * @param {Object?} 
+    */
+    constructor(img={}) {
         this.#uid=Math.random();
         if (undefined !== img.w) {
             this.w = img.w;
@@ -29,6 +31,11 @@ class ImageShort {
 
     set uid(value){
         this.#uid = value;
+    }
+
+    /** declaration fonction rapport hauteur largeur */
+    get RatioWH(){
+        return this.w/this.h;
     }
 }
 

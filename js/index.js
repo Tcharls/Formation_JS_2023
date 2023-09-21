@@ -6,10 +6,10 @@
 
 function changePreHeader(color) {
     // console.time('fnInitJs')
-    console.log(arguments);
+    // console.log(arguments);
     //   console.warn(arguments);
     //   console.error(arguments);
-    console.trace(arguments);
+    // console.trace(arguments);
 
     var jsLoadedNode = document.querySelector("#is-js-loaded");
     jsLoadedNode.innerHTML = "JS est bien <b>CHARGE</b>";
@@ -25,7 +25,7 @@ function changePreHeader(color) {
  */
 function initJs(color) {
     changePreHeader(color);
-    console.log("debut initJs");
+    // console.log("debut initJs");
     document
         .querySelector("#dontclick")
         .addEventListener("click", function (evt) {
