@@ -18,7 +18,7 @@ const loadSelectImages = (images=listeImages) => {
         select.appendChild(optEleme);
     });
 }
-window.lso=loadSelectImages
+// window.lso=loadSelectImages
 
 /** let meme=new Meme();
 console.log(meme);
@@ -88,6 +88,10 @@ function initJs(color) {
 /** declenche le chargement apres chargement DOM
 
  */
+const promiseImage = listeImages.loadFromRest(); // precharge la liste d'image => promise
 document.addEventListener("DOMContentLoaded", function (evt) {
+    promiseImage.then((r)=>{ // charge la liste apres promise yes et DOM yes
+        loadSelectImages(listeImages)
+        });
     initJs("black");
 });

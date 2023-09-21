@@ -95,4 +95,4 @@ export class ImagesList extends Array{
 }
 
 export const listeImages=new ImagesList();
-listeImages.loadFromRest();
+// listeImages.loadFromRest();
