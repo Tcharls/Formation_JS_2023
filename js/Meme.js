@@ -1,3 +1,4 @@
+import { ImageMeme as Img } from './images.js';
 /**
  * Constructeur d'objet Meme
  * variable commencant par "_" => privé (comme toute var déclarée)
@@ -19,6 +20,7 @@ export function Meme(jsonConfiguredMemeStr) {
     this.italic = false;
     this.color = "#000000";
     this.imageId = -1;
+    this.image = new Img();
 
     /**
      * chargement valeurs depuis un meme en json

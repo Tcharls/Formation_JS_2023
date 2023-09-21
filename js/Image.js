@@ -40,7 +40,7 @@ class ImageShort {
 }
 
 /** classe étendue depuis la classe Image */
-class ImageMeme extends ImageShort {
+export class ImageMeme extends ImageShort {
     titre = "pas image";
     id = undefined;
 
@@ -68,7 +68,7 @@ class ImageMeme extends ImageShort {
 
 class ImagesList extends Array{
     loadFromRest(){
-        
+
     }
 
 }

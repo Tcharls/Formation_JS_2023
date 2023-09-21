@@ -1,5 +1,7 @@
 import { Meme } from './Meme.js';
-
+/** let meme=new Meme();
+console.log(meme);
+*/
 /**
  * fonction d'init du bandeau JS
  * @param {string} color chaine de valeur de couleur css
