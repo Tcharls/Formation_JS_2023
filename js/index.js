@@ -4,7 +4,7 @@ import { ImagesList, listeImages } from './Image.js';
 /** fonciton de soummission di formulaire
  * @param {SubmitEvent} evt de soumission
  */
-const addFormEvent=()=>{
+const addFormEvent = () => {
     /**
      * 
      * @param {SubmitEvent} evt 
@@ -19,21 +19,40 @@ const addFormEvent=()=>{
     form.addEventListener("submit", onformsubmit);
 
     // action lors de l'entrée de texte
-    form['texte'].addEventListener("input",(evt)=>{
-        current.update({texte:evt.target.value});
+    form['texte'].addEventListener("input", (evt) => {
+        current.update({ texte: evt.target.value });
     })
 
-    // action lors de l'entrée de taille
-   
+    // action lors du changemnt X et Y
+    form['PosX'].addEventListener("input", (evt) => {
+        current.update({ PosX: Number(evt.target.value) });
+    })
+    form['PosY'].addEventListener("input", (evt) => {
+        current.update({ PosY: Number(evt.target.value) });
+    })
+
+    // action lors du changemnt Taille
+    form['Taille'].addEventListener("input", (evt) => {
+        current.update({ Taille: Number(evt.target.value) });
+    })
+
+    // action lors du changemnt Couleur
+    form['Color'].addEventListener("input", (evt) => {
+        current.update({ Color: evt.target.value });
+    })
 }
 
 const renderMeme = (meme) => {
     /* rendu DOM pour un meme */
     console.log(meme);
     const svg = document.querySelector('svg');
-    const texteElement=svg.querySelector('text');
-    texteElement.innerHTML=meme.texte;
-    
+    const texteElement = svg.querySelector('text');
+    texteElement.innerHTML = meme.texte;
+    texteElement.setAttribute('x', meme.PosX);
+    texteElement.setAttribute('y', meme.PosY);
+    texteElement.setAttribute('font-size', meme.Taille);
+    texteElement.setAttribute('fill', meme.Color);
+
 }
 /** ajout d'un meme
  * 
