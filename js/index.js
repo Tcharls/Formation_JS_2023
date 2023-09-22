@@ -26,7 +26,14 @@ const addFormEvent = () => {
      */
 
     function onformsubmit(evt) {
-        evt.preventDefault()
+        evt.preventDefault();
+        const promiseSave = current.save();
+        promiseSave.then((obj) => {
+            current=new Meme();
+            current.render = renderMeme;
+            fillFormDatas(current);
+            renderMeme(current);
+        })
         console.log(evt);
 
     }
