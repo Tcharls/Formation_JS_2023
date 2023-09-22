@@ -70,7 +70,7 @@ const addFormEvent = () => {
         const imageFound = listeImages.find(elementimage => {
             return elementimage.id === id;
         });
-        current.update({ imageId: imageFound.id, image: imageFound });
+        current.update({ imageId: id, image: imageFound });
         // console.log(current)
     
     })
@@ -91,7 +91,7 @@ const renderMeme = (meme) => {
     texteElement.setAttribute('font-size', meme.Taille);
     texteElement.setAttribute('fill', meme.Color);
 
-    svg.setAttribute('viewbox',`0 0 ${undefined!==meme.image?meme.image.w:'2000'} ${undefined!==meme.image?meme.image.h:'1'}`);
+    svg.setAttribute('viewBox',`0 0 ${undefined!==meme.image?meme.image.w:'2000'} ${undefined!==meme.image?meme.image.h:'1'}`);
     svg.querySelector('image').setAttribute('href',undefined!==meme.image?meme.image.url:'');
 
 };

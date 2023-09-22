@@ -22,8 +22,13 @@ export function Meme(jsonConfiguredMemeStr) {
   this.italic = false;
   this.color = "#000000";
   this.imageId = -1;
-  this.image = new Img();
+  this.image =undefined;
   this.render = undefined;
+  const insideRender = () => {
+    if (undefined !== this.render && typeof this.render === "function") {
+      this.render(this);
+    }
+  };
   const render = () => {
     if (undefined !== this.render && typeof this.render === "function") {
       this.render(this);
