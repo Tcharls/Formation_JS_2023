@@ -1,12 +1,52 @@
 import { Meme } from './Meme.js';
 import { ImagesList, listeImages } from './Image.js';
 
+/** fonciton de soummission di formulaire
+ * @param {SubmitEvent} evt de soumission
+ */
+const addFormEvent=()=>{
+    /**
+     * 
+     * @param {SubmitEvent} evt 
+     */
+    function onformsubmit(evt) {
+        evt.preventDefault()
+        console.log(evt);
+
+    }
+
+    const form = document.forms["meme_form"];
+    form.addEventListener("submit", onformsubmit);
+
+    // action lors de l'entrée de texte
+    form['texte'].addEventListener("input",(evt)=>{
+        current.update({texte:evt.target.value});
+    })
+
+    // action lors de l'entrée de taille
+   
+}
+
+const renderMeme = (meme) => {
+    /* rendu DOM pour un meme */
+    console.log(meme);
+    const svg = document.querySelector('svg');
+    const texteElement=svg.querySelector('text');
+    texteElement.innerHTML=meme.texte;
+    
+}
+/** ajout d'un meme
+ * 
+ */
+let current = new Meme();
+current.render = renderMeme;
+
 // autre possibilité de déclaration fonction
 /**
  * chgt liste option du select en fonciton de la liste d'image
  * @param {ImagesList} images 
  */
-const loadSelectImages = (images=listeImages) => {
+const loadSelectImages = (images = listeImages) => {
     const select = document.querySelector('select#image'); // déclare liste
     const noItem = select.item(0); // récupère l'unique valeur de la liste initiale
     select.innerHTML = ""; // purge liste
@@ -58,32 +98,7 @@ function initJs(color) {
             changePreHeader("tomato");
         });
 
-    /**
-     * 
-     * @param {SubmitEvent} evt 
-     */
-    function onformsubmit(evt) {
-        evt.preventDefault()
-        console.log(evt);
-
-        var meme = {
-            texte: evt.target["texte"].value,
-            taille: Number(evt.target["Taille"].value),
-            posX: Number(evt.target["PosX"].value),
-            posY: Number(evt.target['PosY'].value),
-            color: evt.target["Color"].value,
-        };
-
-        console.log(meme);
-        // console.log('texte', evt.target['texte'].value);
-        // console.log('texte', evt.target['Taille'].value);
-        // console.log('texte', evt.target['PosX'].value);
-        // console.log('texte', evt.target['PosY'].value);
-        // console.log('texte', evt.target['Color'].value);
-        // debugger;
-    }
-
-    document.forms["meme_form"].addEventListener("submit", onformsubmit);
+    addFormEvent();
 }
 
 /** declenche le chargement apres chargement DOM
@@ -91,8 +106,8 @@ function initJs(color) {
  */
 const promiseImage = listeImages.loadFromRest(); // precharge la liste d'image => promise
 document.addEventListener("DOMContentLoaded", function (evt) {
-    promiseImage.then((r)=>{ // charge la liste apres promise yes et DOM yes
+    promiseImage.then((r) => { // charge la liste apres promise yes et DOM yes
         loadSelectImages(listeImages)
-        });
+    });
     initJs("black");
 });

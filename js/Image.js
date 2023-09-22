@@ -46,7 +46,7 @@ export class ImageMeme extends ImageShort {
     titre = "pas image";
     id = undefined;
 
-    constructor(img) {
+    constructor(img={}) {
         super(img);
 
         if (undefined !== img.titre && img.titre.length > 2) {

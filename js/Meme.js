@@ -21,6 +21,20 @@ export function Meme(jsonConfiguredMemeStr) {
     this.color = "#000000";
     this.imageId = -1;
     this.image = new Img();
+    this.render = undefined;
+    const render = () => {
+        if (undefined !== this.render && typeof this.render === 'function') {
+            this.render(this);
+        }
+    }
+
+    /** update du meme par objet avec force 
+     * @param {object} memeData
+    */
+    this.update = function (memeData) {
+        Object.assign(this, memeData);
+        render();
+    }
 
     /**
      * chargement valeurs depuis un meme en json
@@ -30,6 +44,9 @@ export function Meme(jsonConfiguredMemeStr) {
         Object.assign(this, JSON.parse(jsonStr));
     };
 
+    if (jsonConfiguredMemeStr !== undefined) {
+        this.loadFromString(jsonConfiguredMemeStr);
+    }
 }
 
 
