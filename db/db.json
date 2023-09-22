@@ -282,6 +282,26 @@
       "Taille": 100,
       "Color": "#ee1b1b",
       "id": 14
+    },
+    {
+      "texte": "",
+      "posx": 0,
+      "posy": 50,
+      "taille": 100,
+      "fontWeight": 500,
+      "fontSize": 32,
+      "underline": false,
+      "italic": false,
+      "color": "#000000",
+      "imageId": 0,
+      "image": {
+        "id": 0,
+        "titre": "react'n roll",
+        "url": "https://t4.ftcdn.net/jpg/02/24/11/57/240_F_224115780_2ssvcCoTfQrx68Qsl5NxtVIDFWKtAgq2.jpg",
+        "w": 543,
+        "h": 240
+      },
+      "id": 15
     }
   ]
 }
