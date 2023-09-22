@@ -1,14 +1,31 @@
 import { Meme } from './Meme.js';
 import { ImagesList, listeImages } from './Image.js';
 
+/** rempli le formulaire par défaut
+ * @param {Meme} meme 
+ */
+const fillFormDatas = (meme) => {
+    const formElement = document.forms['meme_form'];
+    formElement['texte'].value = meme.texte;
+    formElement['PosX'].value = meme.posx;
+    formElement['PosY'].value = meme.posy;
+    formElement['Color'].value = meme.color;
+    formElement['Taille'].value = meme.taille;
+}
+
 /** fonciton de soummission di formulaire
  * @param {SubmitEvent} evt de soumission
  */
 const addFormEvent = () => {
+    fillFormDatas(current);
+    renderMeme(current);
+
     /**
      * 
      * @param {SubmitEvent} evt 
      */
+
+
     function onformsubmit(evt) {
         evt.preventDefault()
         console.log(evt);
@@ -41,15 +58,18 @@ const addFormEvent = () => {
         current.update({ Color: evt.target.value });
     })
 }
-
+/**
+ * 
+ * @param {Meme} meme 
+ */
 const renderMeme = (meme) => {
     /* rendu DOM pour un meme */
     console.log(meme);
     const svg = document.querySelector('svg');
     const texteElement = svg.querySelector('text');
     texteElement.innerHTML = meme.texte;
-    texteElement.setAttribute('x', meme.PosX);
-    texteElement.setAttribute('y', meme.PosY);
+    texteElement.setAttribute('x', meme.posx);
+    texteElement.setAttribute('y', meme.posy);
     texteElement.setAttribute('font-size', meme.Taille);
     texteElement.setAttribute('fill', meme.Color);
 
