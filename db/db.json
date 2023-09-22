@@ -201,6 +201,87 @@
       "frameSizeX": 0,
       "frameSizeY": 0,
       "id": 10
+    },
+    {
+      "texte": "texte",
+      "posx": 0,
+      "posy": 50,
+      "taille": 20,
+      "fontWeight": 500,
+      "fontSize": 32,
+      "underline": false,
+      "italic": false,
+      "color": "#000000",
+      "imageId": -1,
+      "image": {
+        "url": "",
+        "titre": "pas image"
+      },
+      "Taille": 100,
+      "PosX": 95,
+      "PosY": 70,
+      "Color": "#ed1d1d",
+      "id": 11
+    },
+    {
+      "texte": "texte",
+      "posx": 0,
+      "posy": 50,
+      "taille": 20,
+      "fontWeight": 500,
+      "fontSize": 32,
+      "underline": false,
+      "italic": false,
+      "color": "#000000",
+      "imageId": -1,
+      "image": {
+        "url": "",
+        "titre": "pas image"
+      },
+      "Taille": 100,
+      "id": 12
+    },
+    {
+      "texte": "texte",
+      "posx": 0,
+      "posy": 50,
+      "taille": 20,
+      "fontWeight": 500,
+      "fontSize": 32,
+      "underline": false,
+      "italic": false,
+      "color": "#000000",
+      "imageId": -1,
+      "image": {
+        "url": "",
+        "titre": "pas image"
+      },
+      "Taille": 100,
+      "PosX": 65,
+      "PosY": 95,
+      "id": 13
+    },
+    {
+      "texte": "texte",
+      "posx": 0,
+      "posy": 50,
+      "taille": 20,
+      "fontWeight": 500,
+      "fontSize": 32,
+      "underline": false,
+      "italic": false,
+      "color": "#000000",
+      "imageId": 0,
+      "image": {
+        "id": 0,
+        "titre": "react'n roll",
+        "url": "https://t4.ftcdn.net/jpg/02/24/11/57/240_F_224115780_2ssvcCoTfQrx68Qsl5NxtVIDFWKtAgq2.jpg",
+        "w": 543,
+        "h": 240
+      },
+      "Taille": 100,
+      "Color": "#ee1b1b",
+      "id": 14
     }
   ]
 }

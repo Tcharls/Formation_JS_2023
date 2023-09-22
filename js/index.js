@@ -29,7 +29,7 @@ const addFormEvent = () => {
         evt.preventDefault();
         const promiseSave = current.save();
         promiseSave.then((obj) => {
-            current=new Meme();
+            current = new Meme();
             current.render = renderMeme;
             fillFormDatas(current);
             renderMeme(current);
@@ -63,6 +63,18 @@ const addFormEvent = () => {
     form['Color'].addEventListener("input", (evt) => {
         current.update({ Color: evt.target.value });
     })
+
+    // action lors du changemnt Image
+    form['image'].addEventListener("change", (evt) => {
+        const id = Number(evt.target.value);
+        const imageFound = listeImages.find(elementimage => {
+            return elementimage.id === id;
+        });
+        current.update({ imageId: imageFound.id, image: imageFound });
+        // console.log(current)
+    
+    })
+
 }
 /**
  * 
@@ -78,6 +90,9 @@ const renderMeme = (meme) => {
     texteElement.setAttribute('y', meme.posy);
     texteElement.setAttribute('font-size', meme.Taille);
     texteElement.setAttribute('fill', meme.Color);
+
+    
+    svg.querySelector('image').setAttribute('href',meme.image.url)
 
 }
 /** ajout d'un meme
