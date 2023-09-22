@@ -64,6 +64,21 @@ const addFormEvent = () => {
         current.update({ Color: evt.target.value });
     })
 
+    form["underline"].addEventListener("change", (evt) => {
+        current.update({ underline: evt.target.checked });
+    });
+    form["italic"].addEventListener("change", (evt) => {
+        current.update({ italic: evt.target.checked });
+    });
+
+
+    form["stroke"].addEventListener("change", (evt) => {
+        current.update({ stroke: evt.target.checked });
+    });
+    form["shadow"].addEventListener("change", (evt) => {
+        current.update({ shadow: evt.target.checked });
+    });
+
     // action lors du changemnt Image
     form['image'].addEventListener("change", (evt) => {
         const id = Number(evt.target.value);
@@ -72,7 +87,7 @@ const addFormEvent = () => {
         });
         current.update({ imageId: id, image: imageFound });
         // console.log(current)
-    
+
     })
 
 }
@@ -90,9 +105,18 @@ const renderMeme = (meme) => {
     texteElement.setAttribute('y', meme.posy);
     texteElement.setAttribute('font-size', meme.Taille);
     texteElement.setAttribute('fill', meme.Color);
+    texteElement.style.textDecoration = meme.underline ? "underline" : "none";
+    texteElement.style.fontStyle = meme.italic ? "italic" : "normal";
+    meme.shadow === true
+        ? texteElement.classList.add('shadow')
+        : texteElement.classList.remove('shadow');
+    meme.stroke === true
+        ? texteElement.classList.add('stroke')
+        : texteElement.classList.remove('stroke');
+        
 
-    svg.setAttribute('viewBox',`0 0 ${undefined!==meme.image?meme.image.w:'2000'} ${undefined!==meme.image?meme.image.h:'1'}`);
-    svg.querySelector('image').setAttribute('href',undefined!==meme.image?meme.image.url:'');
+        svg.setAttribute('viewBox', `0 0 ${undefined !== meme.image ? meme.image.w : '2000'} ${undefined !== meme.image ? meme.image.h : '1'}`);
+    svg.querySelector('image').setAttribute('href', undefined !== meme.image ? meme.image.url : '');
 
 };
 

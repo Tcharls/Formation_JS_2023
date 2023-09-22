@@ -61,3 +61,13 @@ footer {
 .col input {
   width: 90%;
 }
+
+
+/* classe SVG */
+.shadow {
+  text-shadow: 10px 10px 10px black;
+}
+
+.stroke {
+  stroke: white;
+}

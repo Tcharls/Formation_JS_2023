@@ -15,7 +15,7 @@ export function Meme(jsonConfiguredMemeStr) {
   // this.id = "id du meme";
   this.posx = 0;
   this.posy = 50;
-  this.taille = 20;
+  this.taille = 100;
   this.fontWeight = 500;
   this.fontSize = 32;
   this.underline = false;
