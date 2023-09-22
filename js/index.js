@@ -91,10 +91,11 @@ const renderMeme = (meme) => {
     texteElement.setAttribute('font-size', meme.Taille);
     texteElement.setAttribute('fill', meme.Color);
 
-    
-    svg.querySelector('image').setAttribute('href',meme.image.url)
+    svg.setAttribute('viewbox',`0 0 ${undefined!==meme.image?meme.image.w:'2000'} ${undefined!==meme.image?meme.image.h:'1'}`);
+    svg.querySelector('image').setAttribute('href',undefined!==meme.image?meme.image.url:'');
 
-}
+};
+
 /** ajout d'un meme
  * 
  */
